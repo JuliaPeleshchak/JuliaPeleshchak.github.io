@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+ 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+ 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+ 
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+ 
+</style>
+</head>
+<body>
+ 
+ <div class="dropdown">
+ <a href="https://www.w3schools.com/Php/default.asp" target="_parent" class="dropbtn">Home</a>
+     </div>
+ 
+<div class="dropdown">
+<button class="dropbtn">Form</button>
+     <div class="dropdown-content">
+ 
+        <a href="get.html"​ target="_parent" >GET</a>
+        <a href="post.html"​ target="_parent" >POST</a>
+        <a href="fileupload.html"​ target="_parent" >file upload</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn">cookies</button>
+    <div class="dropdown-content">
+        <a href="enabled.php"​ target="_parent" >enabled/disabled</a>
+        <a href="create.php"​ target="_parent" >create/retrieve</a>
+        <a href="modify.php"​ target="_parent" >modify/delete</a>
+ </div>
+  </div>
+ 
+ <div class="dropdown">
+ <button class="dropbtn">sessions</button>
+    <div class="dropdown-content">
+        <a href="start.php"​ target="_parent" >start</a>
+        <a href="getm.php"​ target="_parent" >get/modify</a>
+        <a href="destroy.php"​ target="_parent" >destroy</a></div>
+		</div>
+<div class="dropdown">
+<button class="dropbtn">data/time</button>
+     <div class="dropdown-content">
+        <a href="todayis.php"​ target="_parent" >today is</a>
+        <a href="timezone.php"​ target="_parent" >timezone</a>
+        <a href="timestamp.php"​ target="_parent" >timestamp</a></div>
+		</div>
+<div class="dropdown">
+<button class="dropbtn">database</button>
+     <div class="dropdown-content">
+        <a href="https://www.w3schools.com/php/php_mysql_intro.asp"​ target="_parent" >(reserved)</a>
+		<a href="connect.html"​ target="_parent" >Connect</a>
+		<a href="createdb.html"​ target="_parent" >Create DB</a>
+		<a href="createtable.php"​ target="_parent" >Create table</a>
+		<a href="createdata.php"​ target="_parent" >Create Data</a>
+        
+		<a href="readdata.php"​ target="_parent" >Read Data</a>
+		
+		<a href="updatedata.php"​ target="_parent" >Update Data</a>
+		
+		<a href="deletedata.php"​ target="_parent" >Delete Data</a>
+</div>
+</div>
+
+<div class="dropdown">
+ <a href="http://php.net/manual/ru/function.phpinfo.php" target="_parent" class="dropbtn">phpinfo</a>
+     </div>
+</body>
+</html>
+
