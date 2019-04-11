@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Dmytro Pazyn Portfolio</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137425968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-137425968-1');
+</script>
+<link rel="shortcut icon" href="https://img.icons8.com/ios/50/000000/exposure-value-filled.png"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+   h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+  img {margin-bottom: -7px}
+  .w3-row-padding img {margin-bottom: 12px}
+  *{padding:0;margin:0;}
+  body{
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:18px;
+    background-color: black
+  }
+  * {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+#more {display: none;}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+   border: 2px solid grey;
+}
+
+/* On mouse-over */
+.btn:hover {background: #grey;}
+
+.default {color: grey;}
+
+.label-container{
+	position:fixed;
+	bottom:48px;
+	right:105px;
+	display:table;
+	visibility: hidden;
+}
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+}
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
+}
+      .float{
+	      position:fixed;
+	      width:60px;
+	      height:60px;
+	      bottom:40px;
+	      right:40px;
+	      background-color:#0C9;
+	      color:#FFF;
+	      border-radius:50px;
+	      text-align:center;
+	      box-shadow: 2px 2px 3px #999;
+      }
+      .my-float{
+	      margin-top:22px;
+      }
+a.float + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+a.float:hover + div.label-container{
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">ГОЛОВНА</a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Про Мене</a>
+      <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Фотографії</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Контакти</a>
+      <a href="#Map" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Карта</a>
+    </div>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+
+  </div>
+  <img class="w3-image" src="7.jpg" alt="Me" width="1400" height="500">
+  <div class="w3-display-middle w3-padding-large  w3-wide w3-text-light-black w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">ДМИТРО ПАЗИН</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">ДМИТРО ПАЗИН</h5>
+    <h3 class="w3-hide-medium w3-hide-small">ФОТОГРАФ</h3>
+  </div>
+
+</header>
+<a href="#contact" class="float">
+<i class="fa fa-phone my-float"></i>
+</a>
+<div class="label-container">
+<div class="label-text">Подзвони мені!</div>
+<i class="fa fa-play label-arrow"></i>
+</div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">ГОЛОВНА</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Про Мене</a>
+    <a href="#photos" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Фотографії</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Контакти</a>
+    <a href="#map" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Карта</a>
+  </div>
+</nav>
+
+
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Про Мене</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+<p>Я Дмитро Пазин. Фотографія вабила мене ще із самого дитинства, коли в нашій сім'ї появився перший фотоапарат. Такий простезний, на плівку і одну кнопку. Навів, натиснув спуск, і вуаля - момент збережено. <span id="dots">...</span><span id="more"> Мабуть, вже з того часу, мене почала захоплювати ота можливість назавжди закарбувати момент нашого життя, усі емоції, почуття людей, стан речей, навколишній побут, природу. З часом, дитяче наївне почуття радості від блиску спалаху в очах, переросло у юнацьке хоббі, згодом - у професію. Міняється світ, побут, фотокамери і об'єктиви, але оті емоції щирої радості, які ти даруєш людям і собі через фотографію, завжди костанта і великий стимул рухатися вперед. Тому я фотограф.</span></p>
+<button onclick="myFunction2()" class="btn default" id="myBtn">Більше</button>
+    <h3 class="w3-padding-16 w3-text-light-grey">Мої Навички</h3>
+    <p class="w3-wide">Фотографія</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Фотошоп</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div><br>
+    <div/>
+
+
+</div>
+<!-- Page content -->
+<div id="photos">
+  <h2 class="w3-text-light-grey">Мої Фотографії</h2>
+
+
+  <!-- Images (Portfolio) -->
+  <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="5.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="6.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ромашки білі в надвечір'ї</br>
+Розкинулись між двох сузір'їв.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="2.jpg" style="width:100%" onclick="currentSlide(2)" alt='У центрі міста з висоти</br>
+Стоїть Кобзар. Львів з ним на "ти".'>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Карпатська ніч накрила воду,</br>
+За дзвін струмків у нагороду.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Там де гармати і руїни,</br>
+Стоять на стражі України.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="5.jpg" style="width:100%" onclick="currentSlide(5)" alt="А долі дві ідуть в синхрон</br>
+Між ними явно феромон.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Нічний потік машин і струму</br>
+Пронизує повітря шумом.">
+    </div>
+  </div>
+</div>
+</div>
+
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center">КОНТАКТНА ІНФОРМАЦІЯ</h2>
+      <p class="w3-opacity w3-center"><i>Тобі сподобались мої фото? Напиши мені:</i></p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Новояворівськ, Україна<br>
+          <i class="fa fa-phone" style="width:30px"></i> Телефон: +38 067 492 0583<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: dmytro_pazyn@gmail.com<br>
+        </div>
+        <div class="w3-col m6">
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLScnojuK9wGIFOhkb8Nl8807NkFFBYwg0b6PNNTpxGAb1vcSjw/formResponse"  method="post" target = "#contact" >
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Ім'я" required name="entry.1314514449">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email чи Тел." required name="entry.18515789">
+              </div>
+            </div>
+            <input class="w3-input w3-border" rows = '5 'type="text" placeholder="Повідомлення" required name="entry.1476071609">
+            <button class="w3-button w3-black w3-section w3-right" type = 'submit' onclick = "test()">ВІДПРАВИТИ</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  <div class="w3-wide w3-center">
+    <iframe id="Map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10296.496210296367!2d23.96648815!3d49.821333599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1554141230359!5m2!1sen!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <!-- End Page Content -->
+  </div>
+
+  <!-- Footer -->
+
+
+
+
+<!-- End page content -->
+</div>
+<footer class="w3-container w3-padding-64 w3-text-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+  <a class="fa fa-facebook-official w3-hover-opacity"  href="https://www.facebook.com/vyicospam" target="_blank"></a>
+  <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/dmytro_pazyn/" target="_blank"></a>
+</footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+function myFunction2() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Більше";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Менше";
+    moreText.style.display = "inline";
+  }
+}
+
+
+function test() {
+  alert("Thank you for the info!");
+}
+</script>
+
+</body>
+</html>
