@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use the XMLHttpRequest to get the content of a file.</h2>
+
+
+<button onclick="ip_adress()">IP_adress</button>
+<button onclick="headers()">Headers</button>
+<button onclick="date_time()">Date&Time</button>
+<button onclick="echo_json()">Echo Json</button>
+<button onclick="validation()">Validation</button>
+<button onclick="cookies()">Cookie</button>
+<button onclick="md5()">MD5</button>
+<script>
+function ip_adress() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert("IP_adress  "+myObj.ip);
+    }
+  };
+  xmlhttp.open("GET", "http://ip.jsontest.com/", true);
+  xmlhttp.send();
+}
+
+function headers() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert(JSON.stringify(myObj, null, 5));
+    }
+  };
+  xmlhttp.open("GET", "http://headers.jsontest.com/", true);
+  xmlhttp.send();
+}
+function date_time() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert("Date:  "+myObj.date + '      Time:   ' + myObj.time);
+    }
+  };
+  xmlhttp.open("GET", "http://date.jsontest.com", true);
+  xmlhttp.send();
+}
+
+function echo_json() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert(JSON.stringify(myObj, null, 5));
+    }
+  };
+  xmlhttp.open("GET", "http://echo.jsontest.com/key/value/Julia/Peleshchak", true);
+  xmlhttp.send();
+}
+function validation() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert(JSON.stringify(myObj, null, 5));
+    }
+  };
+  xmlhttp.open("GET", ' http://validate.jsontest.com/?json={"key":"value", "Julia":"Peleshchak"}', true);
+  xmlhttp.send();
+}
+function arbitrary_js_code() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert(JSON.stringify(myObj, null, 5));
+    }
+  };
+  xmlhttp.open("GET", "http://code.jsontest.com/", true);
+  xmlhttp.send();
+}
+
+
+
+
+
+function cookies() {
+  var b = new Date();
+  function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+ setCookie('jsontestdotcom',b.getTime(),3);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert(JSON.stringify(myObj, null, 5));
+      }
+  };
+  xmlhttp.open("GET", " http://cookie.jsontest.com/", true);
+  xmlhttp.send();
+}
+function md5() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      alert(JSON.stringify(myObj, null, 5));
+    }
+  };
+  xmlhttp.open("GET", " http://md5.jsontest.com/?text=[lab5_md5example]", true);
+  xmlhttp.send();
+}
+</script>
+</body>
+</html>
