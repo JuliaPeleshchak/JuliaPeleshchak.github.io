@@ -1,5 +1,5 @@
 <html>
 <body>
-Succsess;
+Successful;
 </body>
 </html>
